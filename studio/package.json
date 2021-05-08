@@ -23,9 +23,12 @@
     "@sanity/vision": "^2.10.0",
     "prop-types": "^15.7",
     "react": "^17.0",
-    "react-dom": "^17.0"
+    "react-dom": "^17.0",
+    "react-icons": "^4.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:shericodes/designo-gatsby-sanity.git"
