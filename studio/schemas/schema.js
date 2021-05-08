@@ -12,6 +12,7 @@ import cta from "./cta";
 import socials from "./socials";
 import project_category from "./project-category";
 import project from "./project";
+import location from "./location";
 
 export default createSchema({
   // We name our schema
@@ -26,5 +27,6 @@ export default createSchema({
     socials,
     project_category,
     project,
+    location,
   ]),
 });
