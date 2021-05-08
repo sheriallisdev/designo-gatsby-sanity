@@ -1,7 +1,10 @@
+import { HiSpeakerphone as icon } from "react-icons/hi";
+
 export default {
   name: "cta",
   title: "Call To Action",
   type: "document",
+  icon,
   fields: [
     {
       name: "title",

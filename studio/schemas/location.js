@@ -1,7 +1,10 @@
+import { FaMapMarkedAlt as icon } from "react-icons/fa";
+
 export default {
   name: "location",
   title: "Location",
   type: "document",
+  icon,
   fields: [
     {
       name: "country",

@@ -1,7 +1,10 @@
+import { FcWorkflow as icon } from "react-icons/fc";
+
 export default {
   name: "workflow",
   title: "Workflow",
   type: "document",
+  icon,
   fields: [
     {
       name: "title",

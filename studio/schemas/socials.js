@@ -1,7 +1,10 @@
+import { TiSocialTwitter as icon } from "react-icons/ti";
+
 export default {
   name: "socials",
   title: "Social Media",
   type: "document",
+  icon,
   fields: [
     {
       name: "title",

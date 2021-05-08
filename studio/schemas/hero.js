@@ -1,7 +1,10 @@
+import { MdStars as icon } from "react-icons/md";
+
 export default {
   name: "hero_section",
   title: "Hero",
   type: "document",
+  icon,
   fields: [
     {
       name: "title",

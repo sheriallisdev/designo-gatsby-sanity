@@ -1,7 +1,10 @@
+import { BsFolderFill as icon } from "react-icons/bs";
+
 export default {
   name: "project_category",
   title: "Project Category",
   type: "document",
+  icon,
   fields: [
     {
       name: "title",

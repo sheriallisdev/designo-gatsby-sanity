@@ -1,7 +1,10 @@
+import { GoProject as icon } from "react-icons/go";
+
 export default {
   name: "project",
   title: "Project",
   type: "document",
+  icon,
   fields: [
     {
       name: "title",
