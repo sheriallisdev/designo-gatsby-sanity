@@ -9,6 +9,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import hero from "./hero";
 import workflow from "./workflow";
 import cta from "./cta";
+import socials from "./socials";
 
 export default createSchema({
   // We name our schema
@@ -20,5 +21,6 @@ export default createSchema({
     hero,
     workflow,
     cta,
+    socials,
   ]),
 });
