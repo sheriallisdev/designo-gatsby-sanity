@@ -10,6 +10,7 @@ import hero from "./hero";
 import workflow from "./workflow";
 import cta from "./cta";
 import socials from "./socials";
+import project_category from "./project-category";
 
 export default createSchema({
   // We name our schema
@@ -22,5 +23,6 @@ export default createSchema({
     workflow,
     cta,
     socials,
+    project_category,
   ]),
 });
