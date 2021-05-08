@@ -11,6 +11,7 @@ import workflow from "./workflow";
 import cta from "./cta";
 import socials from "./socials";
 import project_category from "./project-category";
+import project from "./project";
 
 export default createSchema({
   // We name our schema
@@ -24,5 +25,6 @@ export default createSchema({
     cta,
     socials,
     project_category,
+    project,
   ]),
 });
