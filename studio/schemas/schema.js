@@ -7,6 +7,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // Then we give our schema to the builder and provide the result to Sanity
 
 import hero from "./hero";
+import workflow from "./workflow";
 
 export default createSchema({
   // We name our schema
@@ -16,5 +17,6 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     hero,
+    workflow,
   ]),
 });
