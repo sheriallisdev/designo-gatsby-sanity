@@ -8,6 +8,7 @@ module.exports = {
       options: {
         projectId: "pc8s19ha",
         dataset: "production",
+        token: process.env.SANITY_TOKEN,
       },
     },
     "gatsby-plugin-styled-components",
