@@ -12,7 +12,7 @@ const NavStyles = styled.nav`
   align-items: center;
   padding: 0 1.5rem;
   margin: auto;
-  max-width: 1111px;
+  max-width: var(--site-container);
 
   ul {
     display: none;
@@ -90,7 +90,7 @@ const NavStyles = styled.nav`
     z-index: 1;
   }
 
-  @media (min-width: 660px) {
+  @media (min-width: 670px) {
     ul {
       display: flex;
       list-style: none;
@@ -114,7 +114,11 @@ const NavStyles = styled.nav`
 const Nav = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  function handleClick() {
+  function handleCloseMenu() {
+    setMenuIsOpen(false);
+  }
+
+  function handleToggleMenu() {
     setMenuIsOpen(!menuIsOpen);
   }
 
@@ -125,22 +129,22 @@ const Nav = () => {
       </Link>
       <ul className={menuIsOpen ? "active" : ""}>
         <li>
-          <Link to="/about" onClick={handleClick}>
+          <Link to="/about" onClick={handleCloseMenu}>
             Our Company
           </Link>
         </li>
         <li>
-          <Link to="/locations" onClick={handleClick}>
+          <Link to="/locations" onClick={handleCloseMenu}>
             Locations
           </Link>
         </li>
         <li>
-          <Link to="/contact" onClick={handleClick}>
+          <Link to="/contact" onClick={handleCloseMenu}>
             Contact
           </Link>
         </li>
       </ul>
-      <button className="toggle" onClick={handleClick}>
+      <button className="toggle" onClick={handleToggleMenu}>
         <img src={menuIsOpen ? iconClose : iconHamburger} alt="open menu" />
       </button>
       <div className={menuIsOpen ? "overlay-active" : "overlay"}></div>
