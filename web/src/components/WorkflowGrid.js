@@ -7,6 +7,7 @@ import bgPatternSmallCircle from "../images/bg-pattern-small-circle.svg";
 const StyledWorkflowGrid = styled.section`
   max-width: var(--site-container);
   margin: 0 auto;
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
