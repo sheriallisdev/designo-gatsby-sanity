@@ -6,12 +6,12 @@ import WorkflowGrid from "../components/WorkflowGrid";
 
 const IndexPage = () => {
   return (
-    <main>
+    <>
       <HomepageHero />
       <ProjectLinkGrid />
       <WorkflowGrid />
       <CallToAction />
-    </main>
+    </>
   );
 };
 

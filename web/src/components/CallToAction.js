@@ -10,12 +10,13 @@ const CTAStyles = styled.div`
   background: url(${bgCallToAction}), var(--peach);
   background-size: cover;
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 1rem;
   color: var(--white);
   text-align: center;
   padding: 3.75rem;
   border-radius: 15px;
   z-index: 6;
+  transform: translateY(4.5rem);
 
   span {
     display: inline-block;

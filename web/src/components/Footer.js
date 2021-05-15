@@ -4,14 +4,16 @@ import styled from "styled-components";
 import Logo from "./Logo";
 
 const StyledFooter = styled.footer`
-  margin-top: -12rem;
-  padding-top: 14rem;
+  margin-top: -6rem;
+  padding-top: 12rem;
   background-color: var(--black);
   color: var(--white);
-  position: absolute;
-  z-index: -9;
   width: 100%;
   text-align: center;
+  @media (min-width: 670px) {
+    margin-top: -1rem;
+    padding-top: 5rem;
+  }
 `;
 
 const InnerWrapper = styled.div`
