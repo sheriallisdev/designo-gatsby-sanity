@@ -15,6 +15,7 @@ const CTAStyles = styled.div`
   text-align: center;
   padding: 3.75rem;
   border-radius: 15px;
+  z-index: 6;
 
   span {
     display: inline-block;
