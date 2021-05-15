@@ -22,9 +22,9 @@ export default {
       type: "string",
     },
     {
-      name: "button_url",
-      title: "Button URL",
-      type: "url",
+      name: "button_route",
+      title: "Button Route",
+      type: "string",
     },
   ],
 };
