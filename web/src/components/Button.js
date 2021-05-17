@@ -22,7 +22,7 @@ const StyledLink = styled(GatsbyLink)`
 
 function Button({ route, primary, label }) {
   return (
-    <StyledLink to={route} primary={primary}>
+    <StyledLink to={`/${route}`} primary={primary}>
       {label}
     </StyledLink>
   );

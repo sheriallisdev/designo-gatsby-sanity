@@ -3,7 +3,6 @@ import Typography from "../styles/Typography";
 import GlobalStyles from "../styles/GlobalStyles";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import CallToAction from "./CallToAction";
 import "normalize.css";
 
 export default function Layout({ children }) {

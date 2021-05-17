@@ -13,6 +13,11 @@ const StyledProjectGrid = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 30px;
+
+    a:first-child {
+      grid-column: 1;
+      grid-row: 1/3;
+    }
   }
 `;
 
@@ -43,7 +48,7 @@ function ProjectLinkGrid() {
         <ProjectLink
           key={project.slug.current}
           title={project.title}
-          slug={project.slug.current}
+          slug={`projects/${project.slug.current}`}
           bgImage={project.background.asset.url}
         />
       ))}
