@@ -51,10 +51,6 @@ const StyledProjectLink = styled(Link)`
   span {
     z-index: 2;
   }
-  &:first-child {
-    grid-column: 1;
-    grid-row: 1/3;
-  }
   @media (min-width: 670px) {
     h2 {
       font-size: 2.5rem;
@@ -65,7 +61,7 @@ const StyledProjectLink = styled(Link)`
 function ProjectLink({ title, slug, bgImage }) {
   return (
     <StyledProjectLink
-      to={`projects/${slug}`}
+      to={slug}
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
