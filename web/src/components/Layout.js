@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       <Typography />
       <GlobalStyles />
       <Nav />
-      <main>{children}</main>
+      {children}
       <Footer />
     </>
   );
