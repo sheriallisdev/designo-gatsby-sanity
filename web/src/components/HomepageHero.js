@@ -94,7 +94,7 @@ function HomepageHero() {
         <h1>{data.heroData.title}</h1>
         <p>{data.heroData.body}</p>
         <Button
-          route="/about"
+          route="about"
           label={data.heroData.button_label}
           primary={true}
         />
