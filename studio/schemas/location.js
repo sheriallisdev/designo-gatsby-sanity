@@ -12,7 +12,7 @@ export default {
       type: "string",
     },
     {
-      name: "image",
+      name: "illustration",
       title: "Image",
       type: "image",
     },
@@ -50,6 +50,18 @@ export default {
       name: "coordinates",
       title: "Coordinates",
       type: "geopoint",
+    },
+    {
+      name: "map_image",
+      title: "Image of Map (square)",
+      description: "An image of the location on a map (square)",
+      type: "image",
+    },
+    {
+      name: "map_image_landscape",
+      title: "Image of Map (landscape)",
+      description: "An image of the location on a map (landscape)",
+      type: "image",
     },
   ],
 };
