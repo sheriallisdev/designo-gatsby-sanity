@@ -24,7 +24,7 @@ const StyledInfoRow = styled.div`
   }
 
   @media (min-width: 1200px) {
-    &:nth-of-type(2n) {
+    &:nth-of-type(3) {
       flex-direction: row-reverse;
 
       .gatsby-image-wrapper {
@@ -78,7 +78,7 @@ const StyledContent = styled.div`
 
 function InfoRow({ title, bodyText, image }) {
   return (
-    <StyledInfoRow>
+    <StyledInfoRow className="info-row">
       <GatsbyImage image={image} />
       <StyledContent className="content">
         <h2>{title}</h2>
