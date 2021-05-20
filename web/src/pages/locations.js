@@ -125,7 +125,7 @@ const LocationsPage = ({ data }) => {
   return (
     <main>
       {data.locations.nodes.map((location) => (
-        <LocationContainer key={location.id}>
+        <LocationContainer key={location.id} id={location.country}>
           <Map>
             <img
               src={location.map_image_landscape.asset.url}
