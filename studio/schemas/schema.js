@@ -13,6 +13,8 @@ import socials from "./socials";
 import project_category from "./project-category";
 import project from "./project";
 import location from "./location";
+import infoRow from "./info-row";
+import about from "./about";
 
 export default createSchema({
   // We name our schema
@@ -28,5 +30,8 @@ export default createSchema({
     project_category,
     project,
     location,
+    about,
+    /* Objects */
+    infoRow,
   ]),
 });
