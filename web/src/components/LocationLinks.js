@@ -113,7 +113,7 @@ function LocationLinks() {
           country={location.country}
           image={location.illustration.asset.url}
           slug={location.slug.current}
-          key={location.key}
+          key={location.id}
         />
       ))}
     </LocationLinksWrapper>
