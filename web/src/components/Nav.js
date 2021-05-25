@@ -29,6 +29,10 @@ const NavStyles = styled.nav`
     }
   }
 
+  .logoLink {
+    display: inline-flex;
+  }
+
   img {
     height: 27px;
   }
@@ -124,7 +128,7 @@ const Nav = () => {
 
   return (
     <NavStyles>
-      <Link to="/">
+      <Link to="/" className="logoLink">
         <Logo variant="dark" alt="Designo logo" />
       </Link>
       <ul className={menuIsOpen ? "active" : ""}>
