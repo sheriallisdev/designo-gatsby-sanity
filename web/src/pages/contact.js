@@ -1,10 +1,11 @@
 import * as React from "react";
+import ContactHeader from "../components/ContactHeader";
 import LocationLinks from "../components/LocationLinks";
 
 const ContactPage = () => {
   return (
     <main>
-      <h1>Contact - Designo</h1>
+      <ContactHeader />
       <LocationLinks />
     </main>
   );
