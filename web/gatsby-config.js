@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Designo",
+    description:
+      "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. ",
   },
   plugins: [
     {

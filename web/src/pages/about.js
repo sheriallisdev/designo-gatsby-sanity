@@ -5,6 +5,7 @@ import InfoRow from "../components/InfoRow";
 import CallToAction from "../components/CallToAction";
 import styled from "styled-components";
 import LocationLinks from "../components/LocationLinks";
+import SEO from "../components/SEO";
 
 const Wrapper = styled.div`
   max-width: var(--site-container);
@@ -17,27 +18,30 @@ const AboutPage = ({ data }) => {
   console.log();
 
   return (
-    <main>
-      <Wrapper>
-        <AboutHeader
-          title={data.about.title}
-          description={data.about.description}
-          image={data.about.image.asset.gatsbyImageData}
-        />
-        <InfoRow
-          title={data.about.informationRow[0].title}
-          bodyText={data.about.informationRow[0].bodyText}
-          image={data.about.informationRow[0].image.asset.gatsbyImageData}
-        />
-        <LocationLinks />
-        <InfoRow
-          title={data.about.informationRow[1].title}
-          bodyText={data.about.informationRow[1].bodyText}
-          image={data.about.informationRow[1].image.asset.gatsbyImageData}
-        />
-        <CallToAction />
-      </Wrapper>
-    </main>
+    <>
+      <SEO title={data.about.title} />
+      <main>
+        <Wrapper>
+          <AboutHeader
+            title={data.about.title}
+            description={data.about.description}
+            image={data.about.image.asset.gatsbyImageData}
+          />
+          <InfoRow
+            title={data.about.informationRow[0].title}
+            bodyText={data.about.informationRow[0].bodyText}
+            image={data.about.informationRow[0].image.asset.gatsbyImageData}
+          />
+          <LocationLinks />
+          <InfoRow
+            title={data.about.informationRow[1].title}
+            bodyText={data.about.informationRow[1].bodyText}
+            image={data.about.informationRow[1].image.asset.gatsbyImageData}
+          />
+          <CallToAction />
+        </Wrapper>
+      </main>
+    </>
   );
 };
 

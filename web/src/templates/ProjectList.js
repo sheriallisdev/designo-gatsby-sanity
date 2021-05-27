@@ -5,6 +5,7 @@ import styled from "styled-components";
 import bgPatternCategory from "../images/bg-pattern-project-category.svg";
 import ProjectLink from "../components/ProjectLink";
 import CallToAction from "../components/CallToAction";
+import SEO from "../components/SEO";
 
 const CategoryHeader = styled.header`
   max-width: var(--site-container);
@@ -152,40 +153,41 @@ const CategoryLinks = styled.div`
 function ProjectList({ data }) {
   const { category, projects, otherCategories } = data;
 
-  console.log(otherCategories);
-
   return (
-    <Container>
-      <CategoryHeader>
-        <h1>{category.title}</h1>
-        <p>{category.description}</p>
-      </CategoryHeader>
-      <ProjectsContainer>
-        {projects.nodes.map((project) => (
-          <ProjectCard key={project.id} href="#">
-            <GatsbyImage
-              image={project.image.asset.gatsbyImageData}
-              alt={project.title}
+    <>
+      <SEO title={category.title} />
+      <Container>
+        <CategoryHeader>
+          <h1>{category.title}</h1>
+          <p>{category.description}</p>
+        </CategoryHeader>
+        <ProjectsContainer>
+          {projects.nodes.map((project) => (
+            <ProjectCard key={project.id} href="#">
+              <GatsbyImage
+                image={project.image.asset.gatsbyImageData}
+                alt={project.title}
+              />
+              <div className="description">
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+              </div>
+            </ProjectCard>
+          ))}
+        </ProjectsContainer>
+        <CategoryLinks>
+          {otherCategories.nodes.slice(0, 2).map((category) => (
+            <ProjectLink
+              title={category.title}
+              slug={`/projects/${category.slug.current}`}
+              bgImage={category.background.asset.url}
+              key={category.id}
             />
-            <div className="description">
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-            </div>
-          </ProjectCard>
-        ))}
-      </ProjectsContainer>
-      <CategoryLinks>
-        {otherCategories.nodes.slice(0, 2).map((category) => (
-          <ProjectLink
-            title={category.title}
-            slug={`/projects/${category.slug.current}`}
-            bgImage={category.background.asset.url}
-            key={category.id}
-          />
-        ))}
-      </CategoryLinks>
-      <CallToAction />
-    </Container>
+          ))}
+        </CategoryLinks>
+        <CallToAction />
+      </Container>
+    </>
   );
 }
 

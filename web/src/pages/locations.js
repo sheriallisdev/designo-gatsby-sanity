@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import CallToAction from "../components/CallToAction";
 import bgPattern from "../images/bg-pattern-two-circles.svg";
+import SEO from "../components/SEO";
 
 const LocationContainer = styled.div`
   max-width: var(--site-container);
@@ -121,34 +122,37 @@ const Map = styled.div`
 
 const LocationsPage = ({ data }) => {
   return (
-    <main>
-      {data.locations.nodes.map((location) => (
-        <LocationContainer key={location.id} id={location.country}>
-          <Map>
-            <img
-              src={location.map_image_landscape.asset.url}
-              alt={`map of ${location.office_name}`}
-            />
-          </Map>
-          <ContactDetails>
-            <h2>{location.country}</h2>
-            <ContactWrapper>
-              <ContactRow>
-                <span className="title">{location.office_name}</span>
-                <span>{location.address_line1}</span>
-                <span>{location.address_line2}</span>
-              </ContactRow>
-              <ContactRow>
-                <span className="title">Contact</span>
-                <span>P: {location.phone}</span>
-                <span>M: {location.email}</span>
-              </ContactRow>
-            </ContactWrapper>
-          </ContactDetails>
-        </LocationContainer>
-      ))}
-      <CallToAction />
-    </main>
+    <>
+      <SEO title="Locations" />
+      <main>
+        {data.locations.nodes.map((location) => (
+          <LocationContainer key={location.id} id={location.country}>
+            <Map>
+              <img
+                src={location.map_image_landscape.asset.url}
+                alt={`map of ${location.office_name}`}
+              />
+            </Map>
+            <ContactDetails>
+              <h2>{location.country}</h2>
+              <ContactWrapper>
+                <ContactRow>
+                  <span className="title">{location.office_name}</span>
+                  <span>{location.address_line1}</span>
+                  <span>{location.address_line2}</span>
+                </ContactRow>
+                <ContactRow>
+                  <span className="title">Contact</span>
+                  <span>P: {location.phone}</span>
+                  <span>M: {location.email}</span>
+                </ContactRow>
+              </ContactWrapper>
+            </ContactDetails>
+          </LocationContainer>
+        ))}
+        <CallToAction />
+      </main>
+    </>
   );
 };
 

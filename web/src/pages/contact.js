@@ -1,13 +1,17 @@
 import * as React from "react";
 import ContactHeader from "../components/ContactHeader";
 import LocationLinks from "../components/LocationLinks";
+import SEO from "../components/SEO";
 
 const ContactPage = () => {
   return (
-    <main>
-      <ContactHeader />
-      <LocationLinks />
-    </main>
+    <>
+      <SEO title="Contact Us" />
+      <main>
+        <ContactHeader />
+        <LocationLinks />
+      </main>
+    </>
   );
 };
 
