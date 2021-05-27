@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  body {
+    overflow: hidden;
+  }
+
   .sr-only {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
