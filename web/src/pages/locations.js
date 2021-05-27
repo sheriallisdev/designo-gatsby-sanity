@@ -120,8 +120,6 @@ const Map = styled.div`
 `;
 
 const LocationsPage = ({ data }) => {
-  console.log(data.locations.nodes);
-
   return (
     <main>
       {data.locations.nodes.map((location) => (
