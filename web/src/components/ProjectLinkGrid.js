@@ -13,6 +13,8 @@ const StyledProjectGrid = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 30px;
+    padding-left: 0;
+    padding-right: 0;
 
     a:first-child {
       grid-column: 1;

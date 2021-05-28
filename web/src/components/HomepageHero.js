@@ -38,7 +38,6 @@ const HeroStyles = styled.section`
     text-align: left;
     padding: 0 0 0 95px;
     margin-top: 1.5rem;
-    width: calc(var(--site-container) - 36px);
     background-position: right;
     position: relative;
 

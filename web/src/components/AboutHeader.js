@@ -30,6 +30,8 @@ const StyledHeader = styled.header`
   @media (min-width: 1200px) {
     flex-direction: row-reverse;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
 
     &::before {
       display: block;

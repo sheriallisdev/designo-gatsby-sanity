@@ -18,6 +18,7 @@ const CategoryHeader = styled.header`
   text-align: center;
   padding: 6.25rem 1.5rem;
   margin-bottom: 9rem;
+  width: 100%;
 
   p {
     max-width: 40ch;
@@ -30,9 +31,12 @@ const CategoryHeader = styled.header`
   @media (min-width: 670px) {
     margin: 2rem auto;
     border-radius: 15px;
-    width: calc(100vw - 48px);
+    width: calc(100vw - 3rem);
   }
+
   @media (min-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
@@ -120,6 +124,7 @@ const ProjectsContainer = styled.section`
   @media (min-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.6rem;
+    /* max-width: calc(var(--site-container) - 3rem); */
   }
 `;
 
@@ -156,37 +161,39 @@ function ProjectList({ data }) {
   return (
     <>
       <SEO title={category.title} />
-      <Container>
-        <CategoryHeader>
-          <h1>{category.title}</h1>
-          <p>{category.description}</p>
-        </CategoryHeader>
-        <ProjectsContainer>
-          {projects.nodes.map((project) => (
-            <ProjectCard key={project.id} href="#">
-              <GatsbyImage
-                image={project.image.asset.gatsbyImageData}
-                alt={project.title}
+      <main>
+        <Container>
+          <CategoryHeader>
+            <h1>{category.title}</h1>
+            <p>{category.description}</p>
+          </CategoryHeader>
+          <ProjectsContainer>
+            {projects.nodes.map((project) => (
+              <ProjectCard key={project.id} href="#">
+                <GatsbyImage
+                  image={project.image.asset.gatsbyImageData}
+                  alt={project.title}
+                />
+                <div className="description">
+                  <h2>{project.title}</h2>
+                  <p>{project.description}</p>
+                </div>
+              </ProjectCard>
+            ))}
+          </ProjectsContainer>
+          <CategoryLinks>
+            {otherCategories.nodes.slice(0, 2).map((category) => (
+              <ProjectLink
+                title={category.title}
+                slug={`/projects/${category.slug.current}`}
+                bgImage={category.background.asset.url}
+                key={category.id}
               />
-              <div className="description">
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-              </div>
-            </ProjectCard>
-          ))}
-        </ProjectsContainer>
-        <CategoryLinks>
-          {otherCategories.nodes.slice(0, 2).map((category) => (
-            <ProjectLink
-              title={category.title}
-              slug={`/projects/${category.slug.current}`}
-              bgImage={category.background.asset.url}
-              key={category.id}
-            />
-          ))}
-        </CategoryLinks>
-        <CallToAction />
-      </Container>
+            ))}
+          </CategoryLinks>
+          <CallToAction />
+        </Container>
+      </main>
     </>
   );
 }

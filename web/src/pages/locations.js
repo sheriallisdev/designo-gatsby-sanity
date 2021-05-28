@@ -20,6 +20,8 @@ const LocationContainer = styled.div`
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-bottom: 3rem;
+    padding-left: 0;
+    padding-right: 0;
     &:nth-of-type(2n) {
       flex-direction: row;
     }

@@ -113,6 +113,10 @@ const NavStyles = styled.nav`
       display: none;
     }
   }
+  @media (min-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 const Nav = () => {

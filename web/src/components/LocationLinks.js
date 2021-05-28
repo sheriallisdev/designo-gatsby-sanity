@@ -21,6 +21,8 @@ const LocationLinksWrapper = styled.div`
     justify-content: space-between;
     margin-top: 7rem;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
     &::before {
       display: block;
       content: "";

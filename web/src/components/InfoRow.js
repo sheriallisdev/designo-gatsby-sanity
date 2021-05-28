@@ -24,6 +24,9 @@ const StyledInfoRow = styled.div`
   }
 
   @media (min-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
+
     &:nth-of-type(3) {
       flex-direction: row-reverse;
 

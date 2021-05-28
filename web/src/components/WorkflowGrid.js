@@ -17,7 +17,8 @@ const StyledWorkflowGrid = styled.section`
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    padding: 0 24px;
+    padding-left: 0;
+    padding-right: 0;
     &::before {
       display: block;
       content: "";
