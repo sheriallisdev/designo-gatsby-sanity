@@ -106,7 +106,12 @@ function ContactForm() {
         <label htmlFor="message" className="sr-only">
           Message
         </label>
-        <textarea id="message" placeholder="Your Message"></textarea>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
       </fieldset>
       <input type="hidden" name="form-name" value="main-contact" />
       <SubmitButton type="submit">Submit</SubmitButton>
