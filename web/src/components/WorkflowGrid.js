@@ -34,7 +34,7 @@ const StyledWorkflowGrid = styled.section`
   }
 `;
 
-const StyledWorkFlowItem = styled.div`
+const StyledWorkFlowItem = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
