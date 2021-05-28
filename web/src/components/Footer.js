@@ -198,9 +198,12 @@ const Footer = () => {
           </ContactRow>
           <SocialsList>
             {data.socials.nodes.map((item) => (
-              <li key={item.title}>
+              <li key={item.title} aria-labelledby={`${item.title}-label`}>
+                <span id={`${item.title}-label`} hidden>
+                  {item.title}
+                </span>
                 <a href={item.link}>
-                  <img src={item.icon.asset.url} alt={item.title} />
+                  <img src={item.icon.asset.url} alt="" aria-hidden="true" />
                 </a>
               </li>
             ))}
