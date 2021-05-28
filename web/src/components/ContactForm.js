@@ -18,35 +18,16 @@ const StyledContactForm = styled.form`
     border-bottom: 1px solid var(--white);
     padding: 1.5rem 0.75rem 0.75rem 0.75rem;
     color: var(--white);
+
+    &::placeholder {
+      color: var(--white);
+      opacity: 0.7;
+    }
   }
 
   textarea {
     min-height: 7.875rem;
-  }
-
-  button {
-    align-self: center;
-    text-transform: uppercase;
-    margin-top: 2.5rem;
-    padding: 1.125rem 3rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: var(--white);
-    color: var(--black);
-    text-decoration: none;
-    &:hover {
-      cursor: pointer;
-      background-color: var(--light-peach);
-      color: var(--white);
-    }
-
-    @media (min-width: 1200px) {
-      align-self: flex-end;
-      margin-top: 1.5rem;
-    }
+    resize: none;
   }
 
   @media (min-width: 1200px) {
@@ -54,9 +35,39 @@ const StyledContactForm = styled.form`
   }
 `;
 
+const SubmitButton = styled.button`
+  align-self: center;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  padding: 1.125rem 3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--light-peach);
+    color: var(--white);
+  }
+
+  @media (min-width: 1200px) {
+    align-self: flex-end;
+    margin-top: 1.5rem;
+  }
+`;
+
 function ContactForm() {
   return (
-    <StyledContactForm>
+    <StyledContactForm
+      name="main-contact"
+      method="POST"
+      data-netlify="true"
+      onSubmit="submit"
+    >
       <fieldset>
         <legend className="sr-only">Contact Us</legend>
         <label htmlFor="name" className="sr-only">
@@ -97,7 +108,8 @@ function ContactForm() {
         </label>
         <textarea id="message" placeholder="Your Message"></textarea>
       </fieldset>
-      <button type="submit">Submit</button>
+      <input type="hidden" name="form-name" value="main-contact" />
+      <SubmitButton type="submit">Submit</SubmitButton>
     </StyledContactForm>
   );
 }
