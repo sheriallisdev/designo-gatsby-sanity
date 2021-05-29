@@ -117,6 +117,11 @@ const SocialsList = styled.ul`
   margin: 40px auto;
   padding-left: 0;
 
+  a:hover,
+  a:focus {
+    filter: brightness(1.4);
+  }
+
   @media (min-width: 670px) {
     margin-right: 0;
     margin-bottom: 0;
