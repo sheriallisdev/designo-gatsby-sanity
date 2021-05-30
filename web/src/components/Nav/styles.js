@@ -1,11 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
-import Logo from "./Logo";
-import iconClose from "../images/icon-close.svg";
-import iconHamburger from "../images/icon-hamburger.svg";
 
-const NavStyles = styled.nav`
+export const Nav = styled.nav`
   height: 96px;
   display: flex;
   justify-content: space-between;
@@ -118,46 +113,3 @@ const NavStyles = styled.nav`
     padding-right: 0;
   }
 `;
-
-const Nav = () => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-
-  function handleCloseMenu() {
-    setMenuIsOpen(false);
-  }
-
-  function handleToggleMenu() {
-    setMenuIsOpen(!menuIsOpen);
-  }
-
-  return (
-    <NavStyles>
-      <Link to="/" className="logoLink">
-        <Logo variant="dark" alt="Designo logo" />
-      </Link>
-      <ul className={menuIsOpen ? "active" : ""}>
-        <li>
-          <Link to="/about" onClick={handleCloseMenu}>
-            Our Company
-          </Link>
-        </li>
-        <li>
-          <Link to="/locations" onClick={handleCloseMenu}>
-            Locations
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" onClick={handleCloseMenu}>
-            Contact
-          </Link>
-        </li>
-      </ul>
-      <button className="toggle" onClick={handleToggleMenu}>
-        <img src={menuIsOpen ? iconClose : iconHamburger} alt="open menu" />
-      </button>
-      <div className={menuIsOpen ? "overlay-active" : "overlay"}></div>
-    </NavStyles>
-  );
-};
-
-export default Nav;

@@ -1,10 +1,8 @@
-import React from "react";
 import styled from "styled-components";
-import { graphql, useStaticQuery } from "gatsby";
-import bgPatternLeaf from "../images/bg-pattern-leaf.svg";
-import bgPatternSmallCircle from "../images/bg-pattern-small-circle.svg";
+import bgPatternLeaf from "../../images/bg-pattern-leaf.svg";
+import bgPatternSmallCircle from "../../images/bg-pattern-small-circle.svg";
 
-const StyledWorkflowGrid = styled.section`
+export const Grid = styled.section`
   max-width: var(--site-container);
   margin: 0 auto;
   margin-top: 6rem;
@@ -35,7 +33,7 @@ const StyledWorkflowGrid = styled.section`
   }
 `;
 
-const StyledWorkFlowItem = styled.article`
+export const Item = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,14 +55,14 @@ const StyledWorkFlowItem = styled.article`
   }
 `;
 
-const StyledContent = styled.div`
+export const Content = styled.div`
   h3 {
     text-transform: uppercase;
     margin-bottom: 2rem;
   }
 `;
 
-const ImageContainer = styled.div`
+export const ImageContainer = styled.div`
   position: relative;
   &::before {
     position: absolute;
@@ -96,40 +94,3 @@ const ImageContainer = styled.div`
     }
   }
 `;
-
-function WorkflowGrid() {
-  const data = useStaticQuery(graphql`
-    query {
-      allWorkflow: allSanityWorkflow(sort: { order: ASC, fields: _createdAt }) {
-        nodes {
-          title
-          description
-          id
-          image {
-            asset {
-              url
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  return (
-    <StyledWorkflowGrid>
-      {data.allWorkflow.nodes.map((item) => (
-        <StyledWorkFlowItem key={item.id}>
-          <ImageContainer>
-            <img src={item.image.asset.url} alt="" />
-          </ImageContainer>
-          <StyledContent>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </StyledContent>
-        </StyledWorkFlowItem>
-      ))}
-    </StyledWorkflowGrid>
-  );
-}
-
-export default WorkflowGrid;

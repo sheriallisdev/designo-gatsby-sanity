@@ -1,16 +1,14 @@
-import React from "react";
 import styled from "styled-components";
-import ContactForm from "./ContactForm";
-import bgPatternDesktop from "../images/bg-pattern-hero-desktop.svg";
-import bgPatternMobile from "../images/bg-pattern-hero-contact-mobile.svg";
+import bgPatternDesktop from "../../images/bg-pattern-hero-desktop.svg";
+import bgPatternMobile from "../../images/bg-pattern-hero-contact-mobile.svg";
 
-const StyledHeader = styled.header`
+export const Header = styled.header`
   @media (min-width: 670px) {
     padding: 1.5rem;
   }
 `;
 
-const StyledContent = styled.div`
+export const Content = styled.div`
   text-align: center;
   margin-bottom: 1.6rem;
 
@@ -38,7 +36,7 @@ const StyledContent = styled.div`
   }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   max-width: var(--site-container);
   padding: 4.5rem 1.5rem;
   margin-left: auto;
@@ -62,24 +60,3 @@ const Container = styled.div`
     background-position: top 0% left 0%;
   }
 `;
-
-function ContactHeader() {
-  return (
-    <StyledHeader>
-      <Container>
-        <StyledContent>
-          <h1>Contact Us</h1>
-          <p>
-            Ready to take it to the next level? Let’s talk about your project or
-            idea and find out how we can help your business grow. If you are
-            looking for unique digital experiences that’s relatable to your
-            users, drop us a line.
-          </p>
-        </StyledContent>
-        <ContactForm />
-      </Container>
-    </StyledHeader>
-  );
-}
-
-export default ContactHeader;

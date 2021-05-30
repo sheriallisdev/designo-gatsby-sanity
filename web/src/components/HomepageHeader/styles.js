@@ -1,12 +1,8 @@
-import React from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import Button from "./Button";
-import bgPatternLeaf from "../images/bg-pattern-leaf.svg";
-import bgPattern from "../images/bg-pattern-hero-home.svg";
+import bgPatternLeaf from "../../images/bg-pattern-leaf.svg";
+import bgPattern from "../../images/bg-pattern-hero-home.svg";
 
-const HeroStyles = styled.section`
+export const Hero = styled.section`
   max-width: var(--site-container);
   padding: 80px 24px 0 24px;
   margin: auto;
@@ -71,39 +67,3 @@ const HeroStyles = styled.section`
     }
   }
 `;
-
-function HomepageHero() {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      heroData: sanityHeroSection {
-        button_label
-        body
-        title
-        image {
-          asset {
-            gatsbyImageData(width: 624, layout: FIXED)
-          }
-        }
-      }
-    }
-  `);
-
-  return (
-    <HeroStyles>
-      <div className="col-1">
-        <h1>{data.heroData.title}</h1>
-        <p>{data.heroData.body}</p>
-        <Button
-          route="about"
-          label={data.heroData.button_label}
-          primary={true}
-        />
-      </div>
-      <div className="col-2">
-        <GatsbyImage image={data.heroData.image.asset.gatsbyImageData} alt="" />
-      </div>
-    </HeroStyles>
-  );
-}
-
-export default HomepageHero;

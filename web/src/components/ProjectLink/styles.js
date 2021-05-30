@@ -1,9 +1,7 @@
-import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import rightArrow from "../images/icon-right-arrow.svg";
 
-const StyledProjectLink = styled(Link)`
+export const ProjectLink = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,22 +55,3 @@ const StyledProjectLink = styled(Link)`
     }
   }
 `;
-
-function ProjectLink({ title, slug, bgImage }) {
-  return (
-    <StyledProjectLink
-      to={slug}
-      style={{
-        backgroundImage: `url(${bgImage})`,
-      }}
-    >
-      <h2>{title}</h2>
-      <span>
-        View Projects
-        <img src={rightArrow} alt="" />
-      </span>
-    </StyledProjectLink>
-  );
-}
-
-export default ProjectLink;

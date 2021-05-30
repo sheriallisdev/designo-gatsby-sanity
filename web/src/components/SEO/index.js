@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-export default function SEO({ children, location, description, title, image }) {
+export default function Seo({ children, location, description, title, image }) {
   const { site } = useStaticQuery(graphql`
     query {
       site {

@@ -1,12 +1,12 @@
 import * as React from "react";
 import ContactHeader from "../components/ContactHeader";
 import LocationLinks from "../components/LocationLinks";
-import SEO from "../components/SEO";
+import Seo from "../components/SEO";
 
 const ContactPage = () => {
   return (
     <>
-      <SEO title="Contact Us" />
+      <Seo title="Contact Us" />
       <main>
         <ContactHeader />
         <LocationLinks />
