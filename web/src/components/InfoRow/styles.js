@@ -1,9 +1,7 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import bgPattern from "../images/bg-pattern-two-circles.svg";
+import bgPattern from "../../images/bg-pattern-two-circles.svg";
 
-const StyledInfoRow = styled.div`
+export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -45,7 +43,7 @@ const StyledInfoRow = styled.div`
   }
 `;
 
-const StyledContent = styled.div`
+export const Content = styled.div`
   h2 {
     margin: 0;
     color: var(--peach);
@@ -78,17 +76,3 @@ const StyledContent = styled.div`
     }
   }
 `;
-
-function InfoRow({ title, bodyText, image }) {
-  return (
-    <StyledInfoRow className="info-row">
-      <GatsbyImage image={image} />
-      <StyledContent className="content">
-        <h2>{title}</h2>
-        <p>{bodyText}</p>
-      </StyledContent>
-    </StyledInfoRow>
-  );
-}
-
-export default InfoRow;

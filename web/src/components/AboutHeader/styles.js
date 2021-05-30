@@ -1,10 +1,8 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import bgPatternHero from "../images/bg-pattern-hero-about-desktop.svg";
-import bgPatternLeaf from "../images/bg-pattern-leaf.svg";
+import bgPatternHero from "../../images/bg-pattern-hero-about-desktop.svg";
+import bgPatternLeaf from "../../images/bg-pattern-leaf.svg";
 
-const StyledHeader = styled.header`
+export const Header = styled.header`
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -54,7 +52,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledContent = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,17 +80,3 @@ const StyledContent = styled.div`
     }
   }
 `;
-
-function AboutHeader({ title, description, image }) {
-  return (
-    <StyledHeader>
-      <GatsbyImage image={image} />
-      <StyledContent>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </StyledContent>
-    </StyledHeader>
-  );
-}
-
-export default AboutHeader;

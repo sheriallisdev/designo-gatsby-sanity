@@ -5,13 +5,12 @@ import InfoRow from "../components/InfoRow";
 import CallToAction from "../components/CallToAction";
 import styled from "styled-components";
 import LocationLinks from "../components/LocationLinks";
-import SEO from "../components/SEO";
+import Seo from "../components/SEO";
 
 const Wrapper = styled.div`
   max-width: var(--site-container);
   margin-left: auto;
   margin-right: auto;
-  /* padding: 1.5rem; */
 `;
 
 const AboutPage = ({ data }) => {
@@ -19,7 +18,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <>
-      <SEO title={data.about.title} />
+      <Seo title={data.about.title} />
       <main>
         <Wrapper>
           <AboutHeader

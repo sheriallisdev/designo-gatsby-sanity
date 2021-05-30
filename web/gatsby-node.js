@@ -6,7 +6,9 @@ exports.onPostBuild = ({ reporter }) => {
 // Create project category pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const projectListTemplate = path.resolve(`src/templates/ProjectList.js`);
+  const projectListTemplate = path.resolve(
+    `src/templates/ProjectList/index.js`
+  );
   const result = await graphql(`
     query MyQuery {
       categories: allSanityProjectCategory {

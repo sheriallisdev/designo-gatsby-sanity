@@ -1,10 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
 import styled from "styled-components";
-import Button from "./Button";
-import bgCallToAction from "../images/bg-pattern-call-to-action.svg";
+import bgCallToAction from "../../images/bg-pattern-call-to-action.svg";
 
-const CTAStyles = styled.div`
+export const Container = styled.div`
   max-width: var(--site-container);
   width: calc(100vw - 3.75rem);
   background: url(${bgCallToAction}), var(--peach);
@@ -40,35 +37,8 @@ const CTAStyles = styled.div`
   }
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   @media (min-width: 670px) {
     width: 45%;
   }
 `;
-
-function CallToAction() {
-  const data = useStaticQuery(graphql`
-    query {
-      ctaData: sanityCta {
-        title
-        description
-        button_label
-        button_route
-      }
-    }
-  `);
-
-  const { title, description, button_label, button_route } = data.ctaData;
-
-  return (
-    <CTAStyles>
-      <Content>
-        <span>{title}</span>
-        <p>{description}</p>
-      </Content>
-      <Button label={button_label} route={button_route} primary={true} />
-    </CTAStyles>
-  );
-}
-
-export default CallToAction;

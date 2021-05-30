@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import CallToAction from "../components/CallToAction";
 import bgPattern from "../images/bg-pattern-two-circles.svg";
-import SEO from "../components/SEO";
+import Seo from "../components/SEO";
 
 const LocationContainer = styled.div`
   max-width: var(--site-container);
@@ -125,7 +125,7 @@ const Map = styled.div`
 const LocationsPage = ({ data }) => {
   return (
     <>
-      <SEO title="Locations" />
+      <Seo title="Locations" />
       <main>
         {data.locations.nodes.map((location) => (
           <LocationContainer key={location.id} id={location.country}>

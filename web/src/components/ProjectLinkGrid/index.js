@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import ProjectLink from "./ProjectLink";
+import ProjectLink from "../ProjectLink";
 
 const StyledProjectGrid = styled.div`
   max-width: var(--site-container);
