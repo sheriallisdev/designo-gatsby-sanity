@@ -14,7 +14,7 @@ const Nav = () => {
 
   return (
     <Styled.Nav>
-      <Link to="/" className="logoLink">
+      <Link to="/" className="logoLink" onClick={() => setMenuIsOpen(false)}>
         <Logo variant="dark" alt="Designo logo" />
       </Link>
       <ul className={menuIsOpen ? "active" : ""}>
