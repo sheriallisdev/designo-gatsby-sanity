@@ -8,33 +8,37 @@ import iconHamburger from "../../images/icon-hamburger.svg";
 const Nav = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  function handleToggle() {
+  function handleCloseMenu() {
+    setMenuIsOpen(false);
+  }
+
+  function handleToggleMenu() {
     setMenuIsOpen(!menuIsOpen);
   }
 
   return (
     <Styled.Nav>
-      <Link to="/" className="logoLink" onClick={() => setMenuIsOpen(false)}>
+      <Link to="/" className="logoLink">
         <Logo variant="dark" alt="Designo logo" />
       </Link>
       <ul className={menuIsOpen ? "active" : ""}>
         <li>
-          <Link to="/about" onClick={handleToggle}>
+          <Link to="/about" onClick={handleCloseMenu}>
             Our Company
           </Link>
         </li>
         <li>
-          <Link to="/locations" onClick={handleToggle}>
+          <Link to="/locations" onClick={handleCloseMenu}>
             Locations
           </Link>
         </li>
         <li>
-          <Link to="/contact" onClick={handleToggle}>
+          <Link to="/contact" onClick={handleCloseMenu}>
             Contact
           </Link>
         </li>
       </ul>
-      <button className="toggle" onClick={handleToggle}>
+      <button className="toggle" onClick={handleToggleMenu}>
         <img src={menuIsOpen ? iconClose : iconHamburger} alt="open menu" />
       </button>
       <div className={menuIsOpen ? "overlay-active" : "overlay"}></div>
