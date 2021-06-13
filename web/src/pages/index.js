@@ -9,10 +9,12 @@ const IndexPage = () => {
   return (
     <>
       <Seo title="Designo" />
-      <HomepageHero />
-      <ProjectLinkGrid />
-      <WorkflowGrid />
-      <CallToAction />
+      <main>
+        <HomepageHero />
+        <ProjectLinkGrid />
+        <WorkflowGrid />
+        <CallToAction />
+      </main>
     </>
   );
 };
