@@ -13,6 +13,7 @@ const StyledLink = styled(GatsbyLink)`
     props.primary ? "var(--white)" : "var(--peach)"};
   color: ${(props) => (props.primary ? "var(--black)" : "var(--white)")};
   text-decoration: none;
+  transition: var(--transition);
   &:hover {
     cursor: pointer;
     background-color: var(--light-peach);

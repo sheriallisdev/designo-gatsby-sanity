@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --dark-grey: hsl(264, 5%, 20%);
     --light-grey: hsl(210, 17%, 95%);
     --site-container: 1111px;
+    --transition: all 0.3s ease-in-out;
   }
   html {
     box-sizing: border-box;

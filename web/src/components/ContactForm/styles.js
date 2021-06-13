@@ -47,6 +47,8 @@ export const SubmitButton = styled.button`
   background-color: var(--white);
   color: var(--black);
   text-decoration: none;
+  transition: var(--transition);
+
   &:hover {
     cursor: pointer;
     background-color: var(--light-peach);

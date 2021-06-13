@@ -25,6 +25,7 @@ export const ProjectLink = styled(Link)`
     top: 0;
     left: 0;
     border-radius: 15px;
+    transition: var(--transition);
   }
   &:hover,
   &:focus {

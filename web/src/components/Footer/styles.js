@@ -114,6 +114,10 @@ export const SocialsList = styled.ul`
   margin: 40px auto;
   padding-left: 0;
 
+  a {
+    transition: var(--transition);
+  }
+
   a:hover,
   a:focus {
     filter: brightness(1.4);
