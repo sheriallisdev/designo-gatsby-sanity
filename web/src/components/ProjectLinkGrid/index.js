@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import ProjectLink from "../ProjectLink";
 
-const StyledProjectGrid = styled.div`
+const StyledProjectGrid = styled.section`
   max-width: var(--site-container);
   display: grid;
   margin: auto;
