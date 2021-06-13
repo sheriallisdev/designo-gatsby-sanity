@@ -33,6 +33,11 @@ export const ProjectLink = styled(Link)`
       background: rgba(231, 129, 107, 0.8);
     }
   }
+
+  &:focus {
+    outline: none;
+  }
+
   h2 {
     text-transform: uppercase;
     margin: 0;

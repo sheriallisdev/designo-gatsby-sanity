@@ -52,6 +52,11 @@ export const Nav = styled.nav`
     &:hover {
       text-decoration: underline;
     }
+
+    &:focus {
+      outline: 3px dashed var(--peach);
+      outline-offset: 8px;
+    }
   }
   @media (min-width: 670px) {
     flex-direction: row;
@@ -116,11 +121,11 @@ export const SocialsList = styled.ul`
 
   a {
     transition: var(--transition);
-  }
 
-  a:hover,
-  a:focus {
-    filter: brightness(1.4);
+    &:hover,
+    &:focus {
+      filter: brightness(1.4);
+    }
   }
 
   @media (min-width: 670px) {

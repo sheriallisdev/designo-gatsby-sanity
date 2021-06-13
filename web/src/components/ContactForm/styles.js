@@ -55,6 +55,13 @@ export const SubmitButton = styled.button`
     color: var(--white);
   }
 
+  &:focus {
+    background-color: var(--light-peach);
+    color: var(--white);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--black);
+  }
+
   @media (min-width: 1200px) {
     align-self: flex-end;
     margin-top: 1.5rem;

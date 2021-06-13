@@ -19,8 +19,14 @@ export const Nav = styled.nav`
     text-transform: uppercase;
     font-size: 0.875rem;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 3px dashed var(--peach);
+      outline-offset: 8px;
     }
   }
 

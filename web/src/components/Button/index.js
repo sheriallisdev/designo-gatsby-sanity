@@ -14,10 +14,16 @@ const StyledLink = styled(GatsbyLink)`
   color: ${(props) => (props.primary ? "var(--black)" : "var(--white)")};
   text-decoration: none;
   transition: var(--transition);
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     background-color: var(--light-peach);
     color: var(--white);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--black);
   }
 `;
 
