@@ -123,30 +123,32 @@ const LocationsPage = ({ data }) => {
       <main>
         {data.locations.nodes.map((location) => (
           <LocationContainer key={location.id} id={location.country}>
-            <Map
-              center={[
-                `${location.coordinates.lat}`,
-                `${location.coordinates.lng}`,
-              ]}
-              zoom={16}
-            >
-              <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker
-                position={[
+            {typeof window !== "undefined" && (
+              <Map
+                center={[
                   `${location.coordinates.lat}`,
                   `${location.coordinates.lng}`,
                 ]}
+                zoom={16}
               >
-                <Popup>
-                  <strong>{location.office_name}</strong> <br />
-                  {location.address_line1} <br />
-                  {location.address_line2}
-                </Popup>
-              </Marker>
-            </Map>
+                <TileLayer
+                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker
+                  position={[
+                    `${location.coordinates.lat}`,
+                    `${location.coordinates.lng}`,
+                  ]}
+                >
+                  <Popup>
+                    <strong>{location.office_name}</strong> <br />
+                    {location.address_line1} <br />
+                    {location.address_line2}
+                  </Popup>
+                </Marker>
+              </Map>
+            )}
             <ContactDetails>
               <h2>{location.country}</h2>
               <ContactWrapper>
