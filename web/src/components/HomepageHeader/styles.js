@@ -59,7 +59,7 @@ export const Hero = styled.section`
       }
     }
     .col-2 {
-      height: 600px;
+      height: 640px;
       width: 60%;
       img {
         transform: translateX(-50px);
