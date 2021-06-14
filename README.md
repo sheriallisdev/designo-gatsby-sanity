@@ -2,7 +2,7 @@
 
 ## ⚡ Project Links
 - [Live Project](https://srdesigno.netlify.app/)
-- [Frontend Mentor]()
+- [Frontend Mentor](https://www.frontendmentor.io/solutions/designo-using-gatsbyjs-sanityio-as-cms-and-styledcomponents-sww0tbgEs)
 
 ## 🧰 Built with
 - CSS custom properties
