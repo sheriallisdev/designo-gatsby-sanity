@@ -117,5 +117,6 @@ export const Nav = styled.nav`
   @media (min-width: 1200px) {
     padding-left: 0;
     padding-right: 0;
+    margin-top: 1.8125rem;
   }
 `;
