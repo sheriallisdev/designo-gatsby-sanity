@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import useHasMounted from "../hooks/useHasMounted";
+// import useHasMounted from "../hooks/useHasMounted";
 import CallToAction from "../components/CallToAction";
 import bgPattern from "../images/bg-pattern-two-circles.svg";
 import Seo from "../components/SEO";
@@ -124,7 +124,7 @@ const LocationsPage = ({ data }) => {
       <main>
         {data.locations.nodes.map((location) => (
           <LocationContainer key={location.id} id={location.country}>
-            {useHasMounted && (
+            {typeof window !== "undefined" && (
               <Map
                 center={[
                   `${location.coordinates.lat}`,
