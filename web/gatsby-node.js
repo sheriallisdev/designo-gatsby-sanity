@@ -40,7 +40,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /offending-module/,
+            test: /leaflet/,
             use: loaders.null(),
           },
         ],
